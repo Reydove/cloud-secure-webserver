@@ -83,7 +83,7 @@ _(More steps to be filled as you go along)_
 ---
 
 ️ Screenshot
-![Screenshot](screenshot/image1.png)
+![Screenshots](screenshots/image1.png)
 
 - EC2 Instance Running ✅
 - NGINX Welcome Page ✅
