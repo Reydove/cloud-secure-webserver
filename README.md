@@ -4,7 +4,6 @@ Deploying My first EC2 webserver
 
 This project walks through deploying and securing a web server on AWS EC2 using Ubuntu 22.04, NGINX, UFW, Fail2Ban, and HTTPS via Let’s Encrypt.
 
----
 
  📚 Table of Contents
 
@@ -76,11 +75,8 @@ Name: secure-nginx-server
   - HTTP (port 80) — Open to all
   - HTTPS (port 443) — Open to all
 
-This setup ensures we start with minimal exposure to threats, following the principle of **least privilege**.
+This setup ensures we start with minimal exposure to threats, following the principle of least privilge.
 
-_(More steps to be filled as you go along)_
-
----
 
 ️ Screenshot
 ![Screenshots](screenshots/Image1.png)
@@ -106,15 +102,20 @@ Once the EC2 instance is running, we connect from our Mac using the SSH key.
 
 > We use `chmod 400` to ensure the key isn’t publicly viewable — SSH will reject insecure key files.
 
-#### 📸 SSH Connection Successful:
+ 📸 SSH Connection Successful:
 ![Screenshots](screenshots/Image2.png)
-- EC2 Instance Running ✅
-- NGINX Welcome Page ✅
-- HTTPS Enabled ✅
+3. Install NGINX
 
-(Add these as you proceed.)
+After updating the system, we install the NGINX web server.
 
----
+Commands:
+
+bash
+sudo apt install nginx -y
+sudo systemctl start nginx
+sudo systemctl enable nginx
+![Screenshots](screenshots/Image3.png)
+
 
 ## 📘 Lessons Learned
 
