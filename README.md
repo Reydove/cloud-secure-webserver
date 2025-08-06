@@ -52,9 +52,9 @@ Goals:
 | Let’s Encrypt + Certbot | TLS/SSL certificates |
 | Git & GitHub | Version control |
 
----
+-
 
-## 🗺️ Architecture
+ 🗺️ Architecture
 
 
 ---
@@ -70,7 +70,7 @@ Configuration:
 Name: secure-nginx-server
 -AMI: Ubuntu Server 22.04 LTS (HVM)
 - Instance Type:t2.micro (Free Tier)
--*SSH Key Pair: A new key was created and downloaded for secure access.
+-SSH Key Pair: A new key was created and downloaded for secure access.
 - Security Group Rules:
   - SSH (port 22) — Only my IP
   - HTTP (port 80) — Open to all
@@ -82,8 +82,8 @@ _(More steps to be filled as you go along)_
 
 ---
 
-## 🖼️ Screenshot
-![Screenshot](screenshot/image1.png)s
+️ Screenshot
+![Screenshot](screenshot/image1.png)
 
 - EC2 Instance Running ✅
 - NGINX Welcome Page ✅
