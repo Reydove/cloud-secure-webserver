@@ -85,6 +85,29 @@ _(More steps to be filled as you go along)_
 ️ Screenshot
 ![Screenshots](screenshots/Image1.png)
 
+
+2. Connect via SSH
+
+Once the EC2 instance is running, we connect from our Mac using the SSH key.
+
+ Steps:
+
+1. Move the downloaded `.pem` file to a secure folder:
+    ```bash
+    mkdir -p ~/.ssh/aws
+    mv ~/Downloads/secure-server.pem ~/.ssh/aws/
+    chmod 400 ~/.ssh/aws/secure-server.pem
+    ```
+
+2. Connect to the server:
+    ```bash
+    ssh -i ~/.ssh/aws/secure-server.pem ubuntu@<your-ec2-public-ip>
+    ```
+
+> We use `chmod 400` to ensure the key isn’t publicly viewable — SSH will reject insecure key files.
+
+#### 📸 SSH Connection Successful:
+![Screenshots](screenshots/Image2.png)
 - EC2 Instance Running ✅
 - NGINX Welcome Page ✅
 - HTTPS Enabled ✅
