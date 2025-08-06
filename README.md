@@ -56,3 +56,35 @@ This project simulates a real-world deployment and security hardening of a cloud
 
 ## 🗺️ Architecture
 
+
+---
+
+## 🧪 Setup Instructions
+
+Each step below is broken into commands and reasoning.
+
+### 1. Launch EC2 Instance
+👉 [Jump to step](#)
+
+...
+
+_(More steps to be filled as you go along)_
+
+---
+
+## 🖼️ Screenshots
+
+- EC2 Instance Running ✅
+- NGINX Welcome Page ✅
+- HTTPS Enabled ✅
+
+(Add these as you proceed.)
+
+---
+
+## 📘 Lessons Learned
+
+_To be completed at the end..._
+
+---
+
