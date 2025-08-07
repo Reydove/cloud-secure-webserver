@@ -1,27 +1,4 @@
-
-# cloud-secure-webserver
-Deploying My first EC2 webserver
-🛠️ Secure EC2 Web Server Deployment (AWS + Ubuntu + NGINX)
-
-This project walks through deploying and securing a web server on AWS EC2 using Ubuntu 22.04, NGINX, UFW, Fail2Ban, and HTTPS via Let’s Encrypt.
-
-
- 📚 Table of Contents
-
-1. [Project Overview](#project-overview)
-2. [Tools & Technologies](#tools--technologies)
-3. [Architecture](#architecture)
-4. [Setup Instructions](#setup-instructions)
-    - [1. Launch EC2 Instance](#1-launch-ec2-instance)
-    - [2. Connect via SSH](#2-connect-via-ssh)
-    - [3. Install NGINX](#3-install-nginx)
-    - [4. Secure SSH Access](#4-secure-ssh-access)
-    - [5. Configure Firewall (UFW)](#5-configure-firewall-ufw)
-    - [6. Install Fail2Ban](#6-install-fail2ban)
-    - [7. Enable HTTPS (Let’s Encrypt)](#7-enable-https-lets-encrypt)
-5. [Validation](#validation)
-6. [Screenshots](#screenshots)
-7. [Lessons Learned](#lessons-learned)
+# cloud-secure-webserver Deploying My first EC2 webserver 🛠️ Secure EC2 Web Server Deployment (AWS + Ubuntu + NGINX) This project walks through deploying and securing a web server on AWS EC2 using Ubuntu 22.04, NGINX, UFW, Fail2Ban, and HTTPS via Let’s Encrypt.  📚 Table of Contents 1. [Project Overview](#project-overview) 2. [Tools & Technologies](#tools--technologies) 3. [Architecture](#architecture) 4. [Setup Instructions](#setup-instructions) - [1. Launch EC2 Instance](#1-launch-ec2-instance) - [2. Connect via SSH](#2-connect-via-ssh) - [3. Install NGINX](#3-install-nginx) - [4. Secure SSH Access](#4-secure-ssh-access) - [5. Configure Firewall (UFW)](#5-configure-firewall-ufw) - [6. Install Fail2Ban](#6-install-fail2ban) - [7. Enable HTTPS (Let’s Encrypt)](#7-enable-https-lets-encrypt) 5. [Validation](#validation) 6. [Screenshots](#screenshots) 7. [Lessons Learned](#lessons-learned)
 
 
 
@@ -118,6 +95,7 @@ sudo systemctl enable nginx
 ![Screenshots](screenshots/Image3.png)
 
 5. Secure SSH Access
+![Screenshots](screenshots/Image4.png)
 
 To strengthen our server’s security, we harden the SSH configuration.
 
@@ -126,9 +104,9 @@ To strengthen our server’s security, we harden the SSH configuration.
 ```bash
 sudo nano /etc/ssh/sshd_config
 
-![Screenshots](screenshots/Image4.png)
 
 Step 6: Setup UFW Firewall
+![Screenshots](Screenshots/Images5.png)
 UFW (Uncomplicated Firewall) is used to manage firewall rules in Ubuntu. It’s a simple and effective way to secure your server by controlling incoming and outgoing traffic.
 
 To set up UFW to allow only SSH (port 22) and HTTP (port 80), follow these steps:
@@ -144,7 +122,7 @@ Note: Always allow SSH before enabling UFW, or you may lock yourself out of the 
 
 The output should show that OpenSSH and Nginx HTTP are allowed.
 
-![UFW Firewall Setup](Screenshots/image5.png)
+![Screenshots](Screenshots/Image5.png)
 
 
 
