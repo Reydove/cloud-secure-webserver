@@ -116,6 +116,15 @@ sudo systemctl start nginx
 sudo systemctl enable nginx
 ![Screenshots](screenshots/Image3.png)
 
+5. Secure SSH Access
+
+To strengthen our server’s security, we harden the SSH configuration.
+
+ File Edited:
+
+```bash
+sudo nano /etc/ssh/sshd_config
+![Screentshots] (screenshots/Image3.png)
 
 ## 📘 Lessons Learned
 
