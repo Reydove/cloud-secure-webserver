@@ -124,7 +124,8 @@ To strengthen our server’s security, we harden the SSH configuration.
 
 ```bash
 sudo nano /etc/ssh/sshd_config
-![Screentshots](screenshots/Image4.png)
+
+![Screenshots](screenshots/Image4.png)
 
 ## 📘 Lessons Learned
 
