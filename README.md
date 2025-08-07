@@ -1,3 +1,4 @@
+
 # cloud-secure-webserver
 Deploying My first EC2 webserver
 🛠️ Secure EC2 Web Server Deployment (AWS + Ubuntu + NGINX)
@@ -126,6 +127,26 @@ To strengthen our server’s security, we harden the SSH configuration.
 sudo nano /etc/ssh/sshd_config
 
 ![Screenshots](screenshots/Image4.png)
+
+Step 6: Setup UFW Firewall
+UFW (Uncomplicated Firewall) is used to manage firewall rules in Ubuntu. It’s a simple and effective way to secure your server by controlling incoming and outgoing traffic.
+
+To set up UFW to allow only SSH (port 22) and HTTP (port 80), follow these steps:
+
+bash
+Copy
+Edit
+sudo ufw allow OpenSSH
+sudo ufw allow 'Nginx HTTP'
+sudo ufw enable
+sudo ufw status
+Note: Always allow SSH before enabling UFW, or you may lock yourself out of the server.
+
+The output should show that OpenSSH and Nginx HTTP are allowed.
+
+![UFW Firewall Setup](Screenshots/image5.png)
+
+
 
 ## 📘 Lessons Learned
 
