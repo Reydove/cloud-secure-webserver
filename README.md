@@ -126,14 +126,18 @@ sudo systemctl enable nginx
 
 To strengthen our server’s security, we harden the SSH configuration.
 
+Step 6: Setup UFW Firewall
+![Screenshots](Screenshots/Images5.png)
+UFW (Uncomplicated Firewall) is used to manage firewall rules in Ubuntu. It’s a simple and effective way to secure your server by controlling incoming and outgoing traffic.
+  
+
  File Edited:
 
 ```bash
 sudo nano /etc/ssh/sshd_config
 
 
-Step 6: Setup UFW Firewall
-![Screenshots](Screenshots/Images5.png)
+Step 6: Setup UFW Firewall![Screenshots](Screenshots/Images5.png)
 UFW (Uncomplicated Firewall) is used to manage firewall rules in Ubuntu. It’s a simple and effective way to secure your server by controlling incoming and outgoing traffic.
 
 To set up UFW to allow only SSH (port 22) and HTTP (port 80), follow these steps:
