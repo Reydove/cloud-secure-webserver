@@ -143,7 +143,43 @@ The output should show that OpenSSH and Nginx HTTP are allowed.
 
 ![Screenshots](Screenshots/Image5.png)
 
+Step 6: Install Fail2Ban to Protect Against Brute-Force SSH Attacks
+![Screenshots](screenshots/Image6.png)
+Reasoning:
+SSH is one of the most common attack vectors for servers. Hackers often run automated scripts to guess passwords through repeated login attempts. Fail2Ban monitors log files for suspicious activity and automatically bans IPs that show malicious signs — such as too many failed login attempts. This reduces the risk of brute-force attacks.
 
+Steps Taken:
+
+Update package list
+
+sudo apt update
+Install Fail2Ban
+
+
+sudo apt install fail2ban -y
+Enable and start Fail2Ban service
+
+
+sudo systemctl enable fail2ban
+sudo systemctl start fail2ban
+Copy default configuration for customization
+
+sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+Configure SSH protection in /etc/fail2ban/jail.local
+
+enabled = true
+port = ssh
+filter = sshd
+logpath = /var/log/auth.log
+maxretry = 
+bantime = 
+Restart Fail2Ban to apply changes
+
+sudo systemctl restart fail2ban
+Check Fail2Ban status
+
+
+sudo fail2ban-client status
 
 ## 📘 Lessons Learned
 
