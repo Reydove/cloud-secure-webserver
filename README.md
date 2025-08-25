@@ -136,46 +136,7 @@ Note: Always allow SSH before enabling UFW, or you may lock yourself out of the 
 
 The output should show that OpenSSH and Nginx HTTP are allowed.
 
-![Screenshots](Screenshots/Image5.png)
-
-
-
-
-Step 6: Setup UFW Firewall
-
-UFW (Uncomplicated Firewall) is used to manage firewall rules in Ubuntu. It’s a simple way to control incoming and outgoing network traffic.
-
-Commands
-# Allow SSH (important: do this first to avoid locking yourself out)
-sudo ufw allow OpenSSH
-
-# Allow Nginx HTTP traffic (port 80)
-sudo ufw allow 'Nginx HTTP'
-
-# Enable UFW
-sudo ufw enable
-
-# Check UFW status
-sudo ufw status
-
-Notes
-
-Always allow SSH before enabling UFW, or you may lock yourself out of the server.
-
-After enabling, the output should confirm that OpenSSH and Nginx HTTP are allowed.
-
-Example Output
-Status: active
-
-To                         Action      From
---                         ------      ----
-OpenSSH                    ALLOW       Anywhere
-Nginx HTTP                 ALLOW       Anywhere
-OpenSSH (v6)               ALLOW       Anywhere (v6)
-Nginx HTTP (v6)            ALLOW       Anywhere (v6)
-
-
-![Screenshots](Screenshots/Image5.png))
+![Screenshots](screenshots/Image5.png)
 
 
 Step 6: Install Fail2Ban to Protect Against Brute-Force SSH Attacks
